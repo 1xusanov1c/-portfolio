@@ -42,20 +42,36 @@
             <div class="logo">
                 <img src="./images/svg/robert garcia.svg" alt="">
             </div>
-            <ul class="flex justify-between gap-[32px] text-4  xl:hidden lg:flex ">
-                <li><a href="#main" class="hover:text-yellow pt-[30px]">Work</a></li>
-                <li><a href="#about" class="hover:text-yellow pt-[30px]">About</a></li>
-                <li><a href="#content" class="hover:text-yellow pt-[30px]">Contact</a></li>
-                <div class=" ">
-                    <button onclick="DarkMode()">
+            <div class="flex gap-[10px] ">
+                <div class=" flex items-center gap-[20px] mt-[5px]">
+                    <button  onclick="DarkMode()">
                         <i id="sun-icon" class="fas fa-sun w-[20px] h-[20px] rounded-[50%] text-white hidden dark:block"></i>
                         <i id="moon-icon" class="fas fa-moon w-[20px] h-[20px] block dark:hidden "></i>
                     </button>
-                </div>
-            </ul>
+                    <ul class="flex justify-between gap-[32px] text-4  xl:hidden lg:flex ">
+                        <li><a href="#" class="hover:text-yellow  pt-[30px]">Work</a></li>
+                        <li><a href="#" class="hover:text-yellow  pt-[30px]">About</a></li>
+                        <li><a href="#" class="hover:text-yellow  pt-[30px]">Contact</a></li>
+                    </ul>
 
-            <div class="text-[32px]  xl:block lg:hidden">
-                <i class="fa-solid fa-bars"></i>
+                    
+                    <!-- <div class="text-[32px]  xl:block lg:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                    </div> -->
+                </div>
+                <div class="">
+                    <div class="md:hidden">
+                        <button id="menuToggle" class="text-white">
+                          <i class="fas fa-bars fa-2x"></i>
+                        </button>
+                    </div>
+    
+                    <div id="mobileMenu" class="md:hidden hidden  flex flex-col ">
+                        <a href="#main" class="text-white">Home</a>
+                        <a href="#about" class="text-white">About</a>
+                        <a href="#content" class="text-white">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -218,7 +234,7 @@
             </div>
 
 
-            <div class=" xl:w-[350px] lg:w-[600px] xl:mt-[40px] lg:p-6 ">
+            <div class=" xl:w-[300px] lg:w-[600px] xl:mt-[40px] lg:p-6 ">
                 <form class="space-y-4">
                   <div>
                     <label for="name" class="block text-sm font-medium">Name</label>
@@ -297,6 +313,13 @@
                 document.documentElement.classList.add('dark');
             }
         };
+
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            });
         AOS.init();
     </script>
 </body>
