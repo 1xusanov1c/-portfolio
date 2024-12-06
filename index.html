@@ -37,45 +37,44 @@
     <title>Document</title>
 </head>
 <body class=" bg-white text-black dark:bg-black dark:text-white  ">
-    <nav class="mt-[20px]">
+
+    <nav class=" mt-[20px] relative sticky top-0  p-4 z-50 shadow-md">
         <div class="container mt-[36px] flex justify-between items-center xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0">
+            
             <div class="logo">
                 <img src="./images/svg/robert garcia.svg" alt="">
             </div>
-            <div class="flex gap-[10px] ">
-                <div class=" flex items-center gap-[20px] mt-[5px]">
-                    <button  onclick="DarkMode()">
-                        <i id="sun-icon" class="fas fa-sun w-[20px] h-[20px] rounded-[50%] text-white hidden dark:block"></i>
-                        <i id="moon-icon" class="fas fa-moon w-[20px] h-[20px] block dark:hidden "></i>
-                    </button>
-                    <ul class="flex justify-between gap-[32px] text-4  xl:hidden lg:flex ">
-                        <li><a href="#" class="hover:text-yellow  pt-[30px]">Work</a></li>
-                        <li><a href="#" class="hover:text-yellow  pt-[30px]">About</a></li>
-                        <li><a href="#" class="hover:text-yellow  pt-[30px]">Contact</a></li>
-                    </ul>
-
-                    
-                    <!-- <div class="text-[32px]  xl:block lg:hidden">
-                        <i class="fa-solid fa-bars"></i>
-                    </div> -->
-                </div>
-                <div class="">
-                    <div class="md:hidden">
-                        <button id="menuToggle" class="text-white">
-                          <i class="fas fa-bars fa-2x"></i>
-                        </button>
-                    </div>
     
-                    <div id="mobileMenu" class="md:hidden hidden  flex flex-col ">
-                        <a href="#main" class="text-white">Home</a>
-                        <a href="#about" class="text-white">About</a>
-                        <a href="#content" class="text-white">Contact</a>
-                    </div>
+            <div class="flex gap-[10px]">
+                <div class="flex items-center gap-[20px] relative">
+
+                    <button class="z-30" onclick="DarkMode()">
+                        <i id="sun-icon" class="fas fa-sun w-[20px] h-[20px] rounded-[50%] text-white hidden dark:block"></i>
+                        <i id="moon-icon" class="fas fa-moon w-[20px] h-[20px] block dark:hidden"></i>
+                    </button>
+    
+                    <ul class="hidden md:flex gap-[32px] text-lg">
+                        <li><a href="#main" class="hover:text-yellow">Work</a></li>
+                        <li><a href="#about" class="hover:text-yellow">About</a></li>
+                        <li><a href="#content" class="hover:text-yellow">Contact</a></li>
+                    </ul>
+    
+                    <button id="menuToggle" class="md:hidden z-30 dark:text-white text-black">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </button>
                 </div>
             </div>
         </div>
+    
+        <div id="mobileMenu" class="hidden absolute top-0 right-0  bg-opacity-50 z-20 w-[100px] h-full flex flex-col items-start p-[16px]">
+            <button id="menuClose" class="dark:text-white text-black text-2xl self-end mb-4">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#main" class="dark:text-white text-black py-[8px]">Home</a>
+            <a href="#about" class="dark:text-white text-black py-[8px]">About</a>
+            <a href="#content" class="dark:text-white text-black py-[8px]">Contact</a>
+        </div>
     </nav>
-
     <header>
             <div class=" container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0  justify-around items-center mt-[50px] xl:block lg:flex">
                 <div class=" ">
@@ -296,31 +295,48 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         function DarkMode() {
-            const html = document.documentElement;
-            const isDark = html.classList.contains('dark');
-            if (isDark) {
-                html.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
+        const html = document.documentElement;
+        const isDark = html.classList.contains('dark');
+        if (isDark) {
+            html.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        } else {
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
         }
-        
-        // Apply saved theme on page load
-        window.onload = () => {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.documentElement.classList.add('dark');
-            }
-        };
+    }
 
-            const menuToggle = document.getElementById('menuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
+    // Apply saved theme on page load
+    window.onload = () => {
+        if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+        }
+    };
 
-            menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            });
-        AOS.init();
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    // Open mobile menu
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    // Close mobile menu
+    menuClose.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+
+    // Close menu when clicking outside the menu
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+
+    // Initialize AOS (if used)
+    AOS.init();
     </script>
 </body>
 </html>
