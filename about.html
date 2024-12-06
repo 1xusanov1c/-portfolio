@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
           theme: {
             extend: {
               colors: {
@@ -14,7 +15,7 @@
                 yellow: '#D3E97A',
                 color: 'rgba(255, 255, 255, 0.668)',
                 bghover: 'rgba(255, 255, 0, 0.414)',
-                cblack: 'rgb(34, 33, 33)'
+                cblack: '#000000CD'
               },
               screens: {
                   'xl': '320px'
@@ -29,26 +30,31 @@
           }
         }
       </script>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="bg-black text-white ">
-    <nav>
-        <div class="container w-[80%] m-0 mt-[36px] flex justify-between items-center">
+<body class="bg-white text-black dark:bg-black dark:text-white   ">
+    <nav class="mt-[20px]">
+        <div class="container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 mt-[36px] flex justify-between items-center">
             <div class="logo">
                 <img src="./images/svg/robert garcia.svg" alt="">
             </div>
-            <ul class="flex justify-between gap-[32px] text-4 text-white xl:hidden lg:flex ">
-                <li><a href="#" class="hover:text-yellow">Work</a></li>
-                <li><a href="#" class="hover:text-yellow">About</a></li>
-                <li><a href="#" class="hover:text-yellow">Contact</a></li>
-            </ul>
-
-            <div class="text-[32px]  xl:block lg:hidden">
-                <i class="fa-solid fa-bars"></i>
+            <div class="  ">
+                <div class=" flex items-center gap-[20px] mt-[5px]">
+                    <button  onclick="DarkMode()">
+                        <i id="sun-icon" class="fas fa-sun w-[20px] h-[20px] rounded-[50%] text-white hidden dark:block"></i>
+                        <i id="moon-icon" class="fas fa-moon w-[20px] h-[20px] block dark:hidden "></i>
+                    </button>
+                <ul class="flex justify-between gap-[32px] text-4  xl:hidden lg:flex ">
+                    <li><a href="#" class="hover:text-yellow  pt-[30px]">Work</a></li>
+                    <li><a href="#" class="hover:text-yellow  pt-[30px]">About</a></li>
+                    <li><a href="#" class="hover:text-yellow  pt-[30px]">Contact</a></li>
+                </ul>
+                </div>
             </div>
         </div>
     </nav>
-
+    
     <header>
         <div class="container  flex xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 xl:mt-[40px] lg:mt-[100px] ">
             <div class="items">
@@ -56,49 +62,160 @@
             </div>
             <div class=" xl:w-[350px] lg:w-full ">
                 <h2 class="text-[32px] text-medium xl:hidden lg:block ">I am a front-end developer based in Tashkent. Has a degree in computer engineering.</h2>
-                <p class="text-[18px] text-color mt-[40px] mb-[20px] ">I'm a front-end developer based in Tashkent and I'm looking for interesting opportunities. I have a degree in computer engineering. Likes to focus on comfort while developing. Passionate and curious about solving problems. Right now I'm learning Reactjs, Webflow and a bit of design. Although I don't do programming, I like to play football, take pictures and play Volleyball. Learn more to improve your skills
-                .</p>
+                <p class="text-[18px] dark:text-color text-cblack mt-[40px] mb-[20px] ">I'm a front-end developer based in Tashkent and I'm looking for interesting opportunities. I have a degree in computer engineering. Likes to focus on comfort while developing. Passionate and curious about solving problems. Right now I'm learning Reactjs, Webflow and a bit of design. Although I don't do programming, I like to play football, take pictures and play Volleyball. Learn more to improve your skills
+                    .</p>
                     <div class=" flex items-center gap-[20px]">
                         <button class="w-[220px] h-[45px] bg-yellow text-[20px] text-black font-semibold
                         rounded-[30px] ">
-                            Download Resume
-                        </button>
-                        <a href="https://www.instagram.com/1xusanov1c"><i class=" fa-brands fa-instagram text-[28px]  w-[60px] h-[60px] rounded-[50%] bg-cblack text-center pt-[15px] text-yellow "></i></a>
+                        Download Resume
+                    </button>
+                    <a href="https://www.instagram.com/1xusanov1c"><i class=" fa-brands fa-instagram text-[28px]  w-[60px] h-[60px] rounded-[50%] bg-cblack text-center pt-[15px] text-yellow "></i></a>
                         <a href="https://github.com/1xusanov1c"><i class="fa-brands fa-github text-[28px]  w-[60px] h-[60px] rounded-[50%] bg-cblack text-center pt-[15px] text-yellow"></i></a>
                     </div>
             </div>
         </div>
         <div class="container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 ">
-            <img src="./images/png/ozim.png" alt="ozim" class="w-[100%] h-[700px] mt-[60px] rounded-[28px]">
+            <img src="./images/png/ozim.png" alt="ozim" class="w-[100%] md:h-[700px] xl:h-auto mt-[60px] rounded-[28px]">
         </div>
     </header>
 
     <main>
-        <div class="container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 flex gap-[20px] ">
-            <div class="mt-[30px]">
-                <h2 class=" font-semibold xl:text-[43px] lg:text-[55px] ">My Capabilities</h2>
+        <div class="container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 xl:block md:flex gap-[20px] ">
+            <div class="mt-[30px]  ">
+                <h2 class=" font-semibold xl:text-[43px]  lg:text-[55px] ">My Capabilities</h2>
             </div>
-            <div class="w-[600px] h-[241px] mt-[40px]">
-                <p class="text-[18px] text-color">I'm always looking to add more resources. This is not legal advice. Because sorrow is free, the taste of sorrow is pure.</p>
-                <div class=" grid grid-cols-3 gap-[20px]">
-                    <button class="w-[124px] h-[56px] border rounded-[25px]">HTML</button>
-                    <button class="w-[114px] h-[56px] border rounded-[25px]">CSS</button>
-                    <button class="w-[175px] h-[56px] border rounded-[25px]">Javascript</button>
-                    <button class="w-[141px] h-[56px] border rounded-[25px]">Jquery</button>
-                    <button class="w-[197px] h-[56px] border rounded-[25px]">Accessibility</button>
-                    <button class="w-[129px] h-[56px] border rounded-[25px]">Figma</button>
-                    <button class="w-[192px] h-[56px] border rounded-[25px]">Tailwind Css</button>
+            <div class="xl:h-[300px] lg:w-[600px] lg:h-[241px] mt-[40px]">
+                <p class="text-[18px] dark:text-color text-cblack">I'm always looking to add more resources. This is not legal advice. Because sorrow is free, the taste of sorrow is pure.</p>
+                <div class="flex flex-wrap gap-4 mt-[30px] xl:mb-[30px]">
+                    <!-- Technology Tags -->
+                    <span class="px-4 py-2 border  text-white rounded-full">HTML</span>
+                    <span class="px-4 py-2 border  text-white rounded-full">CSS</span>
+                    <span class="px-4 py-2 border  text-white rounded-full">JavaScript</span>
+                    <span class="px-4 py-2 border  text-white rounded-full">jQuery</span>
+                    <span class="px-4 py-2 border  text-white rounded-full">Accessibility</span>
+                    <span class="px-4 py-2 border  text-white rounded-full">Figma</span>
+                    <span class="px-4 py-2 border  text-white rounded-full">Tailwind CSS</span>
                 </div>
             </div>
         </div>
     </main>
-
     <section>
-        <div class="container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0">
-            <div class="">
-                <h2 class="text-[65px]">My Experience</h2>
+        <div class="container mt-[80px] xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 xl:block md:flex items-center gap-[50px]">
+            <div class=" mt-[30px] lg:mb-[200px]">
+                <h2 class="  xl:text-[43px] lg:text-[55px]">My Experience</h2>
+            </div>
+            <div class=" md:w-[60%] xl:mt-[10px] md:mt-[40px]">
+                <div class=" xl:block md:flex items-center md:gap-[50px] lg:gap-[200px] ">
+                    <h3 class="md:text-[18px] lg:text-[24px] font-medium">Freelance Developer</h3>
+                    <p>Nov 2023 — Present </p>
+                </div>
+                <div class="mt-[30px] text-[18px] dark:text-color text-cblack">
+                    Developing modern, responsive web applications using ReactJS, HTML, CSS, and JavaScript.
+                    Created a personal portfolio website to showcase projects and skills, leveraging ReactJS and TailwindCSS for a clean and responsive design.
+                    Built a To-Do application with React Context API for real-time state management.
+                    Integrated RESTful APIs into web applications to display dynamic and interactive data.
+                    Continuously learning advanced features of ReactJS, such as Hooks, Redux, and performance optimization techniques.
+                    Ensuring cross-browser compatibility and implementing mobile-first design principles.
+                </div>
             </div>
         </div>
     </section>
+    
+    <footer id="content">
+        <div class="container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 xl:mt-[40px] lg:mt-[100px] xl:block lg:flex ">
+            <div class="  lg:w-[600px]">
+                <h2 class=" xl:text-[45px] md:text-[76px] font-bold ">Let’s connect</h2>
+                <p class="text-[18px] dark:text-color text-cblack">Say hello at azzbek806@gmail.com</p>
+                <p class="text-[18px] dark:text-color text-cblack">For more info, here’s my resume</p>
+                <ul class="flex  mt-[30px] gap-[20px]">
+                    <li><a href="https://github.com/1xusanov1c"><i class="fa-brands fa-github text-[32px] text-yellow hover:text-white"></i></a></li>
+                    <li><a href="https://www.instagram.com/1xusanov1c"><i class="fa-brands fa-instagram text-[32px] text-yellow hover:text-white"></i></a></li>
+                    <li><a href="https://x.com/1xusanov1c"><i class="fa-brands fa-x-twitter text-[32px] text-yellow hover:text-white"></i></a></li>
+                    <li><a href="https://t.me/xusanov1c_0"><i class="fa-brands fa-telegram text-[32px] text-yellow hover:text-white"></i></a></li>
+                </ul>
+                <div class="mt-[140px] xl:hidden md:block">
+                  <p>© 2023 Robert Garcia</p>
+                </div>
+            </div>
+            
+
+            <div class=" xl:w-[350px] lg:w-[600px] xl:mt-[40px] lg:p-6 ">
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium">Name</label>
+                        <input
+                        type="text"
+                        id="name"
+                        placeholder="John Doe"
+                        class="w-full mt-1 px-3 py-2 bg-gray-800 text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-lime-500"
+                        />
+                    </div>
+            
+                    <div>
+                        <label for="email" class="block text-sm font-medium">Email</label>
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="example@example.com"
+                          class="w-full mt-1 px-3 py-2 bg-gray-800 text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-lime-500"
+                          />
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium">Subject</label>
+                        <input
+                        type="text"
+                        id="subject"
+                        placeholder="Enter subject"
+                        class="w-full mt-1 px-3 py-2 bg-gray-800 text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-lime-500"
+                        />
+                    </div>
+            
+                    <div>
+                        <label for="message" class="block text-sm font-medium">Message</label>
+                        <textarea
+                        id="message"
+                        rows="4"
+                        placeholder="Enter your message"
+                        class="w-full mt-1 px-3 py-2 bg-gray-800 text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-lime-500"
+                        ></textarea>
+                    </div>
+                
+                    <button
+                         type="submit"
+                         class="w-[140px] h-[54px] bg-yellow text-black font-bold rounded-[40px] hover:bg-lime-600 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                         >
+                         Submit
+                    </button>
+                </form>
+            </div>
+              <div class="xl:block md:hidden mt-[80px] mb-[30px]">
+                  <p>© 2023 Robert Garcia</p>
+                </div>
+        </div>
+    </footer>
+        
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function DarkMode() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        // Apply saved theme on page load
+        window.onload = () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        };
+        AOS.init();
+    </script>
 </body>
 </html>
