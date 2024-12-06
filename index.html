@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./style/styles.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              yellow: '#D3E97A',
+              color: 'rgba(255, 255, 255, 0.668)',
+              bghover: 'rgba(255, 255, 0, 0.414)',
+              cblack: 'rgb(34, 33, 33)'
+            },
+            screens: {
+                'xl': '320px'
+            },
+            margin: {
+                '0': '0 auto'
+            },
+            dropShadow:{
+                '12': '0 3px 5px rgb(34, 33, 33)'
+            }
+          }
+        }
+      }
+    </script>
+    <title>Document</title>
+</head>
+<body class="bg-black text-white">
+    <nav>
+        <div class="container mt-[36px] flex justify-between items-center xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0">
+            <div class="logo">
+                <img src="./images/svg/robert garcia.svg" alt="">
+            </div>
+            <ul class="flex justify-between gap-[32px] text-4 text-white xl:hidden lg:flex ">
+                <li><a href="#main" class="hover:text-yellow">Work</a></li>
+                <li><a href="#about" class="hover:text-yellow">About</a></li>
+                <li><a href="#content" class="hover:text-yellow">Contact</a></li>
+            </ul>
+
+            <div class="text-[32px]  xl:block lg:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+            <div class=" container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0  justify-around items-center mt-[50px] xl:block lg:flex">
+                <div class=" ">
+                    <h1 class="text-[65px] uppercase font-bold xl:text-[40px] ">hi, i am <br>qo'chqorov azizbek.
+                    </h1>
+                    <p class="text-[18px] text-color mt-[8px]">A Tashkent based front-end developer passionate about building accessible and user friendly websites.</p>
+                    <div class="flex items-center gap-[20px] mt-[40px]">
+                        <div class="btn">
+                            <button class="w-[187px] h-[54px] bg-yellow rounded-[30px] hover:bg-bghover text-[16px] font-semibold text-black drop-shadow-12  ">Contact Me </button>
+                        </div>
+                        
+                        <div class="flex">
+                            <a href="https://www.instagram.com/1xusanov1c"><i class=" fa-brands fa-instagram text-[28px]  w-[60px] h-[60px] rounded-[50%] bg-cblack text-center pt-[15px] text-yellow  "></i></a>
+                            <a href="https://github.com/1xusanov1c"><i class="fa-brands fa-github text-[28px]  w-[60px] h-[60px] rounded-[50%] bg-cblack text-center pt-[15px] text-yellow"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="header-item xl:mt-[20px]">
+                    <img src="./images/png/Я-removebg-preview.png" alt="ozim" class="w-[100%] h-[500px] rounded-[16px] xl:h-[400px] ">
+                </div>
+            </div>
+    </header>
+    
+    <main id="main">
+            <div class="container  mt-[70px] xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0  ">
+                <h2 class=" font-bold xl:text-[43px] lg:text-[76px]">Featured Projects</h2>
+                <p>Here are some of the selected projects that showcase my passion for <br> front-end development.</p>
+                <div class="mt-[50px]">
+                    <div class=" justify-around gap-[30px] xl:block  lg:flex">
+                        <div class=" bg-stone-800 shadow-2xl rounded-[18px] xl:w-[350px] xl:h-[300px] md:w-[600px] md:h-[500px]">
+                            <img src="./images/png/veb-saiyd.png" alt="" class=" rounded-[30px] xl:px-[10px] xl:py-[30px] md:px-[57px] md:py-[100px]">
+                        </div>
+                        <div class="  xl:w-[350px] xl:h-auto  md:w-[576px] md:h-[490px] xl:px-[20px] xl:py-[30px] lg:px-[48px] lg:py-[60px]">
+                            <h2 class="text-[32px]">Website for street 88</h2>
+                            <p class="text-[18px] text-color mt-[16px]">Street 88, we collaborated with a designer to create a promotional web page for Hamburger. Fully responsive design with dynamic content capabilities, seamless integration of newsletter functionality to keep fans updated with the latest adventures.</p>
+
+                            <div class="flex flex-col divide-y divide-slate-700  ">
+                                <h3 class="text-[18px] mt-[32px] ">Project Info</h3>
+                                <span class="flex justify-between   ">
+                                    <h3 class="text-[18px] mt-[32px]">Year</h3>
+                                    <p class="text-[18px] mt-[32px]">2023</p>
+                                </span>
+                                
+                                <span class="flex justify-between border-b-2 ">
+                                    <h3 class="text-[18px] mt-[32px]">Role</h3>
+                                    <p class="text-[18px] mt-[32px]">Front-end Developer</p>
+                                </span>
+                                
+                            </div>
+
+                            <div class="mt-[30px]  xl:text-[20px]  lg:text-[28px]  ">
+                                <a href="https://gaburger.vercel.app/" class=" text-yellow underline ">Live Demo</a>
+                                <a href="https://github.com/1xusanov1c/Gaburger.git" class="text-yellow  underline">See on Github <i class="fa-brands fa-github"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class=" justify-around gap-[30px] mt-[70px] xl:block lg:flex">
+                        <div class=" bg-stone-800 shadow-2xl rounded-[18px] xl:w-[350px] xl:h-[300px] md:w-[600px] md:h-[500px]">
+                            <img src="./images/png/newsportal.png" alt="" class=" rounded-[30px] xl:px-[10px] xl:py-[30px] md:px-[57px] md:py-[100px]">
+                        </div>
+                        <div class="  xl:w-[350px] xl:h-auto md:w-[576px] md:h-[490px] xl:px-[20px] xl:py-[30px] lg:px-[48px] lg:py-[60px]">
+                            <h2 class="text-[32px]">Blog site for news</h2>
+                            <p class="text-[18px] text-color mt-[16px]">Mastered the intricacies of SCSS in creating an innovative news homepage, navigating complex design decisions for a seamless user experience. Used the challenge to improve front-end development skills.</p>
+
+                            <div class="flex flex-col divide-y divide-slate-700  ">
+                                <h3 class="text-[18px] mt-[32px] ">Project Info</h3>
+                                <span class="flex justify-between   ">
+                                    <h3 class="text-[18px] mt-[32px]">Year</h3>
+                                    <p class="text-[18px] mt-[32px]">2022</p>
+                                </span>
+                                
+                                <span class="flex justify-between border-b-2  ">
+                                    <h3 class="text-[18px] mt-[32px]">Role</h3>
+                                    <p class="text-[18px] mt-[32px]">Front-end Developer</p>
+                                </span>
+                                
+                            </div>
+
+                            <div class="mt-[30px]  xl:text-[20px]  lg:text-[28px] ">
+                                <a href="https://news-portal-da3l.vercel.app/" class=" text-yellow underline ">Live Demo</a>
+                                <a href="https://github.com/1xusanov1c/news-portal.git" class="text-yellow  underline">See on Github <i class="fa-brands fa-github"></i> </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class=" justify-around gap-[30px] mt-[70px] xl:block lg:flex">
+                        <div class=" bg-stone-800 shadow-2xl rounded-[18px] xl:w-[350px] xl:h-[300px] md:w-[600px] md:h-[500px] ">
+                            <img src="./images/png/food.png" alt="" class="  xl:px-[10px] xl:py-[30px] md:px-[57px] md:py-[100px]">
+                        </div>
+                        <div class="  xl:w-[350px] xl:h-auto md:w-[576px] md:h-[490px] xl:px-[20px] xl:py-[30px] lg:px-[48px] lg:py-[60px]">
+                            <h2 class="text-[32px]">Website for the Food Network</h2>
+                            <p class="text-[18px] text-color mt-[16px]">The Food Network partnered with a designer to create a promotional web page for us. Fully responsive design with dynamic content capabilities, seamless newsletter integration to keep fans updated with the latest adventures.</p>
+
+                            <div class="flex flex-col divide-y divide-slate-700  ">
+                                <h3 class="text-[18px] mt-[32px] ">Project Info</h3>
+                                <span class="flex justify-between   ">
+                                    <h3 class="text-[18px] mt-[32px]">Year</h3>
+                                    <p class="text-[18px] mt-[32px]">2024</p>
+                                </span>
+                                
+                                <span class="flex justify-between border-b-2  ">
+                                    <h3 class="text-[18px] mt-[32px]">Role</h3>
+                                    <p class="text-[18px] mt-[32px]">Front-end Developer</p>
+                                </span>
+                                
+                            </div>
+
+                            <div class="mt-[30px]  xl:text-[20px]  lg:text-[28px] ">
+                                <a href="https://food-seven-ashy.vercel.app/" class=" text-yellow  underline ">Live Demo</a>
+                                <a href="https://github.com/1xusanov1c/food.git" class="text-yellow  underline">See on Github <i class="fa-brands fa-github"></i> </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </main>
+
+
+    <section id="about">
+        <div class="container  flex xl:mt-[40px] lg:mt-[100px] xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 ">
+            <div class="items">
+                <h2 class="text-[76px] w-[407px] h-[97px] font-bold xl:hidden lg:block"> About me</h2>
+            </div>
+            <div class="">
+                <h3 class="text-[32px] text-medium xl:hidden lg:block ">I am a front-end developer based in Tashkent. Has a degree in computer engineering.</h3>
+                <p class="text-[18px] text-color mt-[40px] mb-[20px] ">I'm a front-end developer based in Tashkent and I'm looking for interesting opportunities. I have a degree in computer engineering. Likes to focus on comfort while developing. Passionate and curious about solving problems. Right now I'm learning Reactjs, Webflow and a bit of design. Although I don't do programming, I like to play football, take pictures and play Volleyball. Learn more to improve your skills
+                .</p>
+                <a href="about.html" class="w-[129px] h-[28px] text-yellow xl:text-[20px] md:text-[30px] underline">More about me</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="content">
+        <div class="container w-[80%] m-0  mt-[80px] xl:block lg:flex ">
+            <div class="w-[600px]">
+                <h2 class="text-[76px] font-bold ">Let’s connect</h2>
+                <p class="text-[18px] text-color">Say hello at azzbek806@gmail.com</p>
+                <p class="text-[18px] text-color">For more info, here’s my resume</p>
+                <ul class="flex  mt-[30px] gap-[20px]">
+                    <li><a href="https://github.com/1xusanov1c"><i class="fa-brands fa-github text-[32px] text-yellow hover:text-white"></i></a></li>
+                    <li><a href="https://www.instagram.com/1xusanov1c"><i class="fa-brands fa-instagram text-[32px] text-yellow hover:text-white"></i></a></li>
+                    <li><a href="https://x.com/1xusanov1c"><i class="fa-brands fa-x-twitter text-[32px] text-yellow hover:text-white"></i></a></li>
+                    <li><a href="https://t.me/xusanov1c_0"><i class="fa-brands fa-telegram text-[32px] text-yellow hover:text-white"></i></a></li>
+                </ul>
+                <div class="mt-[140px]">
+                  <p>© 2023 Robert Garcia</p>
+                </div>
+            </div>
+
+
+            <div class="w-[600px] xl:mt-[40px] lg:p-6 ">
+                <form class="space-y-4">
+                  <div>
+                    <label for="name" class="block text-sm font-medium">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="John Doe"
+                      class="w-full mt-1 px-3 py-2 bg-gray-800 text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-lime-500"
+                    />
+                  </div>
+            
+                  <div>
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="example@example.com"
+                      class="w-full mt-1 px-3 py-2 bg-gray-800 text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-lime-500"
+                    />
+                  </div>
+            
+                  <div>
+                    <label for="subject" class="block text-sm font-medium">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      placeholder="Enter subject"
+                      class="w-full mt-1 px-3 py-2 bg-gray-800 text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-lime-500"
+                    />
+                  </div>
+            
+                  <div>
+                    <label for="message" class="block text-sm font-medium">Message</label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      placeholder="Enter your message"
+                      class="w-full mt-1 px-3 py-2 bg-gray-800 text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-lime-500"
+                    ></textarea>
+                  </div>
+            
+                  <button
+                    type="submit"
+                    class="w-[140px] h-[54px] bg-yellow text-black font-bold rounded-[40px] hover:bg-lime-600 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+        </div>
+
+    </footer>
+</body>
+</html>

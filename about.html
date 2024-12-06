@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                yellow: '#D3E97A',
+                color: 'rgba(255, 255, 255, 0.668)',
+                bghover: 'rgba(255, 255, 0, 0.414)',
+                cblack: 'rgb(34, 33, 33)'
+              },
+              screens: {
+                  'xl': '320px'
+              },
+              margin: {
+                  '0': '0 auto'
+              },
+              dropShadow:{
+                  '12': '0 3px 5px rgb(34, 33, 33)'
+              }
+            }
+          }
+        }
+      </script>
+    <title>Document</title>
+</head>
+<body class="bg-black text-white ">
+    <nav>
+        <div class="container w-[80%] m-0 mt-[36px] flex justify-between items-center">
+            <div class="logo">
+                <img src="./images/svg/robert garcia.svg" alt="">
+            </div>
+            <ul class="flex justify-between gap-[32px] text-4 text-white xl:hidden lg:flex ">
+                <li><a href="#" class="hover:text-yellow">Work</a></li>
+                <li><a href="#" class="hover:text-yellow">About</a></li>
+                <li><a href="#" class="hover:text-yellow">Contact</a></li>
+            </ul>
+
+            <div class="text-[32px]  xl:block lg:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container  flex xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 xl:mt-[40px] lg:mt-[100px] ">
+            <div class="items">
+                <h1 class="text-[76px] w-[407px] h-[97px] font-bold xl:hidden lg:block"> About me</h1>
+            </div>
+            <div class=" xl:w-[350px] lg:w-full ">
+                <h2 class="text-[32px] text-medium xl:hidden lg:block ">I am a front-end developer based in Tashkent. Has a degree in computer engineering.</h2>
+                <p class="text-[18px] text-color mt-[40px] mb-[20px] ">I'm a front-end developer based in Tashkent and I'm looking for interesting opportunities. I have a degree in computer engineering. Likes to focus on comfort while developing. Passionate and curious about solving problems. Right now I'm learning Reactjs, Webflow and a bit of design. Although I don't do programming, I like to play football, take pictures and play Volleyball. Learn more to improve your skills
+                .</p>
+                    <div class=" flex items-center gap-[20px]">
+                        <button class="w-[220px] h-[45px] bg-yellow text-[20px] text-black font-semibold
+                        rounded-[30px] ">
+                            Download Resume
+                        </button>
+                        <a href="https://www.instagram.com/1xusanov1c"><i class=" fa-brands fa-instagram text-[28px]  w-[60px] h-[60px] rounded-[50%] bg-cblack text-center pt-[15px] text-yellow "></i></a>
+                        <a href="https://github.com/1xusanov1c"><i class="fa-brands fa-github text-[28px]  w-[60px] h-[60px] rounded-[50%] bg-cblack text-center pt-[15px] text-yellow"></i></a>
+                    </div>
+            </div>
+        </div>
+        <div class="container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 ">
+            <img src="./images/png/ozim.png" alt="ozim" class="w-[100%] h-[700px] mt-[60px] rounded-[28px]">
+        </div>
+    </header>
+
+    <main>
+        <div class="container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0 flex gap-[20px] ">
+            <div class="mt-[30px]">
+                <h2 class=" font-semibold xl:text-[43px] lg:text-[55px] ">My Capabilities</h2>
+            </div>
+            <div class="w-[600px] h-[241px] mt-[40px]">
+                <p class="text-[18px] text-color">I'm always looking to add more resources. This is not legal advice. Because sorrow is free, the taste of sorrow is pure.</p>
+                <div class=" grid grid-cols-3 gap-[20px]">
+                    <button class="w-[124px] h-[56px] border rounded-[25px]">HTML</button>
+                    <button class="w-[114px] h-[56px] border rounded-[25px]">CSS</button>
+                    <button class="w-[175px] h-[56px] border rounded-[25px]">Javascript</button>
+                    <button class="w-[141px] h-[56px] border rounded-[25px]">Jquery</button>
+                    <button class="w-[197px] h-[56px] border rounded-[25px]">Accessibility</button>
+                    <button class="w-[129px] h-[56px] border rounded-[25px]">Figma</button>
+                    <button class="w-[192px] h-[56px] border rounded-[25px]">Tailwind Css</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <div class="container xl:w-[95%] xl:m-0 lg:w-[80%] lg:m-0">
+            <div class="">
+                <h2 class="text-[65px]">My Experience</h2>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
